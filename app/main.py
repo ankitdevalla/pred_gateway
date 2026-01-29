@@ -2,6 +2,8 @@ import logging, uuid
 from fastapi import FastAPI, Request
 from datetime import datetime, date
 from typing import Dict, Tuple
+from dotenv import load_dotenv
+load_dotenv()
 
 from app.logging import setup_logging, request_id_ctx_var
 from app.models import ForecastRequest, ForecastResult, ConfidenceInterval
